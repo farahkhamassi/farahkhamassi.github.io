@@ -887,3 +887,35 @@ script {
     color: #fff; 
     border-color: #2FDC9C; 
 }
+
+/* Styles pour les écrans de taille inférieure à 768px (tablettes et smartphones en mode portrait) */
+@media screen and (max-width: 768px) {
+    /* Exemples de styles que vous pouvez ajuster selon vos besoins */
+    nav ul {
+        flex-direction: column;
+    }
+
+    nav ul li {
+        margin-bottom: 10px;
+    }
+
+    .outer-container {
+        padding: 0 20px;
+    }
+
+    .item {
+        margin-bottom: 20px;
+    }
+}
+
+/* Styles pour les écrans de taille inférieure à 480px (smartphones en mode portrait) */
+@media screen and (max-width: 480px) {
+    /* Exemples de styles que vous pouvez ajuster selon vos besoins */
+    nav ul li a {
+        font-size: 14px;
+    }
+
+    .outer-container {
+        padding: 0 10px;
+    }
+}
