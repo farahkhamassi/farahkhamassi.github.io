@@ -887,35 +887,79 @@ script {
     color: #fff; 
     border-color: #2FDC9C; 
 }
-
 /* Styles pour les écrans de taille inférieure à 768px (tablettes et smartphones en mode portrait) */
 @media screen and (max-width: 768px) {
-    /* Exemples de styles que vous pouvez ajuster selon vos besoins */
+    /* Réinitialisation des styles */
     nav ul {
         flex-direction: column;
+        padding: 0;
     }
 
     nav ul li {
         margin-bottom: 10px;
     }
 
+    nav ul li a {
+        padding: 10px;
+    }
+
+    /* Styles spécifiques pour la navigation mobile */
+    #menu-buttons {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px;
+    }
+
+    #cross {
+        display: none;
+    }
+
+    #menu {
+        display: none;
+    }
+
+    #mobile-nav.open #menu {
+        display: block;
+    }
+
+    /* Styles pour le contenu principal */
     .outer-container {
         padding: 0 20px;
+    }
+
+    .parallax {
+        height: auto;
+        padding: 100px 0;
     }
 
     .item {
         margin-bottom: 20px;
     }
+
+    .section-title {
+        font-size: 24px;
+    }
 }
 
 /* Styles pour les écrans de taille inférieure à 480px (smartphones en mode portrait) */
 @media screen and (max-width: 480px) {
-    /* Exemples de styles que vous pouvez ajuster selon vos besoins */
-    nav ul li a {
-        font-size: 14px;
+    /* Réduire la taille de l'image */
+    .box1 .img-container img {
+        max-width: 100%;
+        height: auto;
     }
 
-    .outer-container {
-        padding: 0 10px;
+    /* Ajuster le conteneur du texte pour qu'il reste dans la page */
+    .box2 {
+        width: 90%; /* Ajuster selon vos besoins */
+        margin: 0 auto; /* Centrer le conteneur */
+        padding: 10px; /* Ajouter un peu de marge intérieure */
+    }
+
+    /* Réduire la taille de la police pour un meilleur ajustement */
+    .box2 p {
+        font-size: 14px;
+        line-height: 1.5;
     }
 }
