@@ -887,31 +887,79 @@ script {
     color: #fff; 
     border-color: #2FDC9C; 
 }
-/* Styles pour les écrans de taille inférieure à 768px (tablettes et smartphones en mode portrait) */
-@media screen and (max-width: 768px) {
-    /* Réinitialisation des styles */
+/* Media queries pour smartphones */
+@media only screen and (max-width: 600px) {
+    /* Modifier les styles ici pour les smartphones */
+    #homepage {
+        margin-top: 120px; /* Ajoute une marge au-dessus du contenu pour éviter le chevauchement */
+    }
+
+    nav {
+        position: static; /* Change la position de la navbar pour éviter le chevauchement */
+    }
+}
+
+/* Media queries pour tablettes */
+@media only screen and (min-width: 601px) and (max-width: 1024px) {
+    /* Modifier les styles ici pour les tablettes */
+    #homepage {
+        margin-top: 100px; /* Ajoute une marge au-dessus du contenu pour éviter le chevauchement */
+    }
+
+    nav {
+        position: static; /* Change la position de la navbar pour éviter le chevauchement */
+    }
+}
+
+/* Media queries pour smartphones */
+@media only screen and (max-width: 600px) {
+    /* Modifier les styles ici pour les smartphones */
     nav ul {
-        flex-direction: column;
-        padding: 0;
+        width: 100%;
+        text-align: center;
+        padding-top: 10px;
     }
 
-    nav ul li {
-        margin-bottom: 10px;
+    nav li {
+        display: block;
+        padding: 10px 0;
     }
 
-    nav ul li a {
-        padding: 10px;
-    }
-
-    /* Styles spécifiques pour la navigation mobile */
     #menu-buttons {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding: 10px;
+        display: block;
+    }
+
+    #menu {
+        display: none;
     }
 
     #cross {
+        display: none;
+    }
+
+    #homepage {
+        width: 90%;
+    }
+
+    .project {
+        width: 90%;
+    }
+}
+
+/* Media queries pour tablettes */
+@media only screen and (min-width: 601px) and (max-width: 1024px) {
+    /* Modifier les styles ici pour les tablettes */
+    nav ul {
+        width: 100%;
+        text-align: center;
+    }
+
+    nav li {
+        display: block;
+        padding: 15px 0;
+    }
+
+    #menu-buttons {
         display: none;
     }
 
@@ -919,47 +967,15 @@ script {
         display: none;
     }
 
-    #mobile-nav.open #menu {
-        display: block;
+    #cross {
+        display: none;
     }
 
-    /* Styles pour le contenu principal */
-    .outer-container {
-        padding: 0 20px;
+    #homepage {
+        width: 80%;
     }
 
-    .parallax {
-        height: auto;
-        padding: 100px 0;
-    }
-
-    .item {
-        margin-bottom: 20px;
-    }
-
-    .section-title {
-        font-size: 24px;
-    }
-}
-
-/* Styles pour les écrans de taille inférieure à 480px (smartphones en mode portrait) */
-@media screen and (max-width: 480px) {
-    /* Réduire la taille de l'image */
-    .box1 .img-container img {
-        max-width: 100%;
-        height: auto;
-    }
-
-    /* Ajuster le conteneur du texte pour qu'il reste dans la page */
-    .box2 {
-        width: 90%; /* Ajuster selon vos besoins */
-        margin: 0 auto; /* Centrer le conteneur */
-        padding: 10px; /* Ajouter un peu de marge intérieure */
-    }
-
-    /* Réduire la taille de la police pour un meilleur ajustement */
-    .box2 p {
-        font-size: 14px;
-        line-height: 1.5;
+    .project {
+        width: 80%;
     }
 }
